@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*depois que a pagina atingir menos de 760px ele vai ter essas configurações*/
+@media screen and (max-width: 760px){
+    header{
+        flex-direction: column;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    h2{
+        font-size: 38px;
+    }
+
+    form{
+        margin: 0 auto;
+    }
+    input{
+        align-self: center;
+    }
+
+    img{
+        width: 450px;
+        margin-top: 60px;
+    }
+
+    ul{
+        text-align: center;
+    }
+}
