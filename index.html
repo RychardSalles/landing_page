@@ -31,7 +31,7 @@
             <form> <!-- espaços de login-->
                 <input type="text" placeholder="Nome">
                 <input type="email" placeholder="E-mail">
-                <input type="Submit" value="Enviar >"> 
+                <input type="Submit" value="Enviar >" id="enviar" onclick="clicar()"> 
             </form>
         </aside>
 
@@ -39,5 +39,12 @@
             <img src="componentes/imagens/77d0a7c454e658833800528e748edbe9.png" alt="purple woman">
         </article>
     </main>
+
+    <script>
+        function clicar(){
+            var a = document.getElementById('enviar')
+            alert('Obrigado por se inscrever!')
+        }
+    </script>
 </body>
 </html>
