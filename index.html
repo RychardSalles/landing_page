@@ -1,50 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link href="/style/style.css" rel="stylesheet" >
-    <link href="/style/fonts.css" rel="stylesheet" >
-    <link href="/style/media.css" rel="stylesheet" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Criativo</title>
+  <link href="style/style.css" rel="stylesheet">
+  <link href="style/fonts.css" rel="stylesheet">
+  <link href="style/media.css" rel="stylesheet">
 </head>
 <body>
-    <header> <!--cabeçalho-->
-        <div id="title">
-            <h1>Marketing</h1>
-            <h1>Criativo</h1>
-</div>
-            <ul>
-                <a href="#"><li>inicio</li></a>
-                <a href="#"><li>Serviços</li></a>
-                <a href="#"><li>Sobre</li></a>
-                <a href="#"><li>Contato</li></a>
-                <a href="#" id="botao"><li>Já tem uma conta?</li></a>
-            </ul>
-    </header>
-    <main>
-        <aside>
-            <span><h2>Inscreva-se Agora</h2></span>
-            <h2>Na Newslatter</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aspernatur pariatur voluptates, beatae minus et voluptatum eligendi vel, quas placeat saepe expedita earum veritatis? Architecto excepturi enim hic quas labore.
-            </p>
-            <form> <!-- espaços de login-->
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="E-mail">
-                <input type="Submit" value="Enviar >" id="enviar" onclick="clicar()"> 
-            </form>
-        </aside>
 
-        <article> <!--Local da imagem-->
-            <img src="componentes/imagens/77d0a7c454e658833800528e748edbe9.png" alt="purple woman">
-        </article>
-    </main>
+  <!-- ===== HEADER / NAV ===== -->
+  <header>
+    <div id="title">
+      <h1>Marketing</h1>
+      <h1>Criativo</h1>
+    </div>
 
-    <script>
-        function clicar(){
-            var a = document.getElementById('enviar')
-            alert('Obrigado por se inscrever!')
-        }
-    </script>
+    <ul>
+      <a href="#inicio"><li>Início</li></a>
+      <a href="#servicos"><li>Serviços</li></a>
+      <a href="#sobre"><li>Sobre</li></a>
+      <a href="#contato"><li>Contato</li></a>
+      <!-- Redireciona para o formulário de login -->
+      <a href="../login_form/index.html" id="botao"><li>Já tem uma conta?</li></a>
+    </ul>
+  </header>
+
+  <!-- ===== INÍCIO / HERO ===== -->
+  <main id="inicio">
+    <aside>
+      <span><h2>Inscreva-se Agora</h2></span>
+      <h2>Na Newsletter</h2>
+      <p>
+        Receba toda semana as melhores estratégias de marketing digital,
+        tendências criativas e dicas práticas para fazer a sua marca crescer
+        de verdade. Junte-se a mais de 5.000 profissionais.
+      </p>
+      <form id="form-newsletter">
+        <input type="text"  id="nl-nome"  placeholder="Seu nome"  required>
+        <input type="email" id="nl-email" placeholder="Seu e-mail" required>
+        <input type="submit" value="Quero me inscrever →" id="enviar">
+      </form>
+      <p id="msg-sucesso" style="display:none;color:#b36ce0;margin-top:16px;font-weight:600">
+        ✓ Obrigado! Você receberá nossas novidades em breve.
+      </p>
+    </aside>
+
+    <article>
+      <img src="componentes/imagens/77d0a7c454e658833800528e748edbe9.png" alt="Marketing Criativo">
+    </article>
+  </main>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos">
+    <div class="section-header">
+      <h3 class="section-label">O que fazemos</h3>
+      <h2>Nossos <span>Serviços</span></h2>
+      <p>Soluções completas de marketing para sua marca se destacar no digital.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h4>Gestão de Redes Sociais</h4>
+        <p>Criação de conteúdo estratégico para Instagram, TikTok e LinkedIn com foco em engajamento e crescimento.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✍️</div>
+        <h4>Criação de Conteúdo</h4>
+        <p>Textos, artes e vídeos que comunicam o valor da sua marca e convertem seguidores em clientes.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📧</div>
+        <h4>E-mail Marketing</h4>
+        <p>Campanhas de e-mail segmentadas com alta taxa de abertura. Automatização e fluxos personalizados.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h4>Tráfego Pago</h4>
+        <p>Anúncios no Meta Ads e Google Ads com estratégia de segmentação para atrair o cliente certo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre">
+    <div class="sobre-content">
+      <div class="sobre-texto">
+        <h3 class="section-label">Quem somos</h3>
+        <h2>Criatividade com <span>estratégia</span></h2>
+        <p>
+          O Marketing Criativo nasceu da ideia de que toda marca tem uma história
+          poderosa para contar. Acreditamos que criatividade sem estratégia é só arte,
+          e estratégia sem criatividade é só planilha. A gente une os dois.
+        </p>
+        <p style="margin-top: 16px;">
+          Nossa equipe combina design thinking, dados e storytelling para construir
+          campanhas que emocionam, engajam e convertem. Atendemos marcas que querem
+          crescer de forma autêntica e sustentável.
+        </p>
+        <div class="sobre-numeros">
+          <div class="numero-item">
+            <strong>5k+</strong>
+            <span>Inscritos</span>
+          </div>
+          <div class="numero-item">
+            <strong>3 anos</strong>
+            <span>de experiência</span>
+          </div>
+          <div class="numero-item">
+            <strong>200+</strong>
+            <span>Projetos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-visual">
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🚀</div>
+          <strong>Crescimento real</strong>
+          <span>Estratégias baseadas em dados</span>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">🎨</div>
+          <strong>Design que converte</strong>
+          <span>Visual alinhado com resultado</span>
+        </div>
+        <div class="sobre-card">
+          <div class="sobre-card-icon">📊</div>
+          <strong>Análise constante</strong>
+          <span>Relatórios mensais detalhados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato">
+    <div class="section-header">
+      <h3 class="section-label">Fale conosco</h3>
+      <h2>Vamos trabalhar <span>juntos?</span></h2>
+      <p>Preencha o formulário e entraremos em contato em até 24 horas.</p>
+    </div>
+
+    <div class="contato-wrapper">
+      <form id="form-contato" class="form-contato">
+        <div class="campo-grupo">
+          <input type="text"  id="ct-nome"    placeholder="Seu nome"    required>
+          <input type="email" id="ct-email"   placeholder="Seu e-mail"  required>
+        </div>
+        <input type="text" id="ct-assunto" placeholder="Assunto" required>
+        <textarea id="ct-msg" placeholder="Conte um pouco sobre o que você precisa..." rows="5" required></textarea>
+        <button type="submit" class="btn-contato">Enviar mensagem →</button>
+        <p id="msg-contato" style="display:none;color:#b36ce0;margin-top:12px;font-weight:600">
+          ✓ Mensagem enviada! Entraremos em contato em breve.
+        </p>
+      </form>
+
+      <div class="contato-info">
+        <div class="info-item">
+          <span class="info-icon">📧</span>
+          <div>
+            <strong>E-mail</strong>
+            <span>contato@marketingcriativo.com</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📱</span>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>(11) 99999-0000</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">⏰</span>
+          <div>
+            <strong>Atendimento</strong>
+            <span>Seg–Sex, 9h às 18h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div id="title" style="line-height:normal">
+      <h1>Marketing</h1>
+      <h1>Criativo</h1>
+    </div>
+    <p style="color:rgba(255,255,255,.5);font-size:.85rem">© 2025 Marketing Criativo – Todos os direitos reservados</p>
+    <nav class="footer-nav">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </footer>
+
+  <script>
+    /* ── Newsletter: exibe mensagem de sucesso ── */
+    document.getElementById('form-newsletter').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.getElementById('msg-sucesso').style.display = 'block';
+    });
+
+    /* ── Contato: exibe mensagem de sucesso ── */
+    document.getElementById('form-contato').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.querySelector('.btn-contato').style.display = 'none';
+      document.getElementById('msg-contato').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
